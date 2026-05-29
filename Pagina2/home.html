@@ -16,7 +16,7 @@
     <!--HEADER-->
     <header>
       <!--NAVBAR-->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary Navbar ">
         <div class="container-fluid">
           <!-- LOGO + TITULO -->
           <a class="navbar-brand d-flex align-items-center" href="#">
@@ -43,24 +43,26 @@
 
           <!-- CONTENIDO -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- BUSCADOR-->
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar..."
+              />
+
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
             <!-- MENU -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" href="#"> Home </a>
               </li>
-              <!-- BUSCADOR CENTRADO -->
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Buscar..."
-                />
-
-                <button class="btn btn-outline-success" type="submit">
-                  Buscar
-                </button>
-              </form>
-              <!-- DROPDOWN -->
+            </ul>
+            <!-- DROPDOWN -->
+            <ul>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -71,10 +73,11 @@
                   ARTICULOS
                 </a>
 
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu Dropmenu">
                   <li><a class="dropdown-item" href="#">SOCIAL</a></li>
                   <li><a class="dropdown-item" href="#">INAU</a></li>
                   <li><a class="dropdown-item" href="#">FEMINISMO</a></li>
+                  <li><a class="dropdown-item" href="#">LGTBQ+</a></li>
                 </ul>
               </li>
             </ul>

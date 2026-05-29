@@ -1,0 +1,18 @@
+.Navbar .container-fluid {
+  position: relative;
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-collapse form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
