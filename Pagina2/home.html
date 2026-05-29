@@ -9,7 +9,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/Pagina2/css/styles.css" />
+    <link rel="stylesheet" href="/" />
     <title>Ruido Blanco</title>
   </head>
   <body>
@@ -17,60 +17,67 @@
     <header>
       <!--NAVBAR-->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <!--TITULO-->
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">RUIDO BLANCO</a>
+          <!-- LOGO + TITULO -->
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img
+              src="css/img/advertencia.png"
+              alt="Logo"
+              width="40"
+              height="40"
+              class="me-2"
+            />
+
+            RUIDO BLANCO
+          </a>
+
+          <!-- BOTON RESPONSIVE -->
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- CONTENIDO -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- MENU -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <!--HOME-->
-                <a class="nav-link active" aria-current="page" href="#/pagina1"
-                  >Home</a
-                >
+                <a class="nav-link active" href="#"> Home </a>
               </li>
-              <!--DROP ARTICULOS-->
+              <!-- BUSCADOR CENTRADO -->
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Buscar..."
+                />
+
+                <button class="btn btn-outline-success" type="submit">
+                  Buscar
+                </button>
+              </form>
+              <!-- DROPDOWN -->
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false"
                 >
                   ARTICULOS
                 </a>
+
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">SOCIAL</a></li>
                   <li><a class="dropdown-item" href="#">INAU</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">FEMINISMO</a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">LGBT</a></li>
+                  <li><a class="dropdown-item" href="#">FEMINISMO</a></li>
                 </ul>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
