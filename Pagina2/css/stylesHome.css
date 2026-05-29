@@ -16,3 +16,8 @@
 .navbar-nav {
   margin-left: auto;
 }
+
+.dropdown {
+  position: absolute;
+  left: 90%;
+}
