@@ -38,3 +38,42 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* TEXTO SOBRE NOSOTROS */
+
+.sobre-nosotros {
+  width: 80%;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10%;
+}
+.contenedor-sobre {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.imagen-sobre {
+  flex: 1;
+}
+
+.imagen-sobre img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+.texto-sobre {
+  flex: 1;
+  margin-right: 60px;
+}
+
+.texto-sobre h2 {
+  margin-bottom: 20px;
+}
+
+.texto-sobre p {
+  line-height: 1.6;
+  text-align: justify;
+}
