@@ -74,7 +74,7 @@ body {
   width: 80%;
   margin: 100px auto;
   padding: 40px;
-  background: #30221764;
+  background: hsla(26, 35%, 14%, 0.392);
   border-radius: 30px;
 }
 .contenedor-sobre {
@@ -105,4 +105,18 @@ body {
 .texto-sobre p {
   line-height: 1.6;
   text-align: justify;
+}
+
+/* SECTION CON ATICULOS */
+.section-article {
+  background-color: hsla(26, 35%, 14%, 0.392);
+
+  width: 80%;
+  margin: 100px auto;
+  padding: 40px;
+}
+
+.contenedor-article {
+  position: relative;
+  display: flex;
 }
