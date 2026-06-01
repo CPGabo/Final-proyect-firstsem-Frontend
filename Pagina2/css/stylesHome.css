@@ -21,7 +21,14 @@ body {
 }
 
 .controlLargoBuscador {
-  width: 800px;
+  width: 100%;
+  min-width: 400px;
+}
+@media (max-width: 992px) {
+  .d-flex.mx-auto {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 .btnSearch {
@@ -33,6 +40,10 @@ body {
   color: white;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
   transform: translate(+2px, +2px);
+}
+
+.movement {
+  margin-left: 40px;
 }
 
 /* CARRUSEL */
