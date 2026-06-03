@@ -16,8 +16,6 @@ window.addEventListener("scroll", () => {
   ultimoScroll = scrollActual;
 });
 
-
-
 document.getElementById("btnEntrar").addEventListener("click", () => {
-  window.location.href = "../Pagina2/home.html";
+  window.location.href = "/HOME/home.html";
 });
