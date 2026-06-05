@@ -1,50 +1,23 @@
-async function cargarArticulos() {
-  const grilla = document.querySelector("#grilla-articulos");
+async function cargarArticulo() {
+  const contenedor = document.querySelector("#articulo");
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
   try {
-    const response = await fetch("http://localhost:3000/articulos");
+    const response = await fetch(`http://localhost:3000/articulos/${id}`);
     if (!response.ok) throw new Error("Error: " + response.status);
-    const articulos = await response.json();
-    // Limpiar el contenido placeholder
-    grilla.innerHTML = "";
-    // Generar una card por cada articulo
-    for (const articulo of articulos) {
-      grilla.insertAdjacentHTML(
-        "beforeend",
-        `
-<div class="col-12 col-md-6 col-lg-4">
-<div class="card h-100">
-<div class="card-body">
-<span class="badge bg-secondary
+    const articulo = await response.json();
 
-mb-2">${articulo.categoria}</span>
-
-<h5 class="card-title">${articulo.titulo}</h5>
-<p class="card-text text-muted">${articulo.descripcion}</p>
-</div>
-<div class="card-footer d-flex justify-content-between
-
-align-items-center">
-
-<small class="text-muted">Por ${articulo.autor}</small>
-<a href="articulo.html?id=${articulo.id}" class="btn btn-sm
-
-btn-outline-dark">
-Leer más
-</a>
-</div>
-</div>
-</div>
-`,
-      );
-    }
+    contenedor.innerHTML = `
+      <h1>${articulo.titulo}</h1>
+      <p><strong>Autor:</strong> ${articulo.autor}</p>
+      <p><strong>Categoría:</strong> ${articulo.categoria}</p>
+      <p>${articulo.descripcion}</p>
+    `;
   } catch (error) {
-    grilla.innerHTML = `
-<div class="col-12">
-<p class="text-danger">No se pudieron cargar los artículos.</p>
-</div>
-`;
+    contenedor.innerHTML = `<p class="text-danger">No se pudo cargar el artículo.</p>`;
     console.error(error);
   }
 }
-// Ejecutar cuando la página cargue
-cargarArticulos();
+
+cargarArticulo();
