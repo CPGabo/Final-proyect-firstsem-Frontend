@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "RoadRaceStamp";
+  src: url("./fonts/roadrace-stamp.otf") format("opentype");
+}
+
 body {
   background-image: url(/Imagenes/fondoDePagina.jpg);
   background-size: cover;
@@ -105,4 +110,8 @@ body {
 .texto-sobre p {
   line-height: 1.6;
   text-align: justify;
+}
+
+.logo-font {
+  font-family: "RoadRaceStamp", sans-serif;
 }
