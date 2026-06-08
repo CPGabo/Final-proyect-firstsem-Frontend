@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "RoadRaceStamp";
+  src: url("./fonts/roadrace-stamp.otf") format("opentype");
+}
+
 body {
   background-image: url(/Imagenes/fondoDePagina.jpg);
   background-size: cover;
@@ -37,7 +42,7 @@ body {
 
 .btnSearch:hover {
   background-color: #302217;
-  color: white;
+  color: #dcbd81;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
   transform: translate(+2px, +2px);
 }
@@ -74,7 +79,7 @@ body {
   width: 80%;
   margin: 100px auto;
   padding: 40px;
-  background: hsla(26, 35%, 14%, 0.392);
+  background: #30221764;
   border-radius: 30px;
 }
 .contenedor-sobre {
@@ -107,19 +112,6 @@ body {
   text-align: justify;
 }
 
-/* SECTION CON ATICULOS */
-.section-article {
-  background-color: hsla(26, 35%, 14%, 0.392);
-
-  width: 80%;
-  margin: 100px auto;
-  padding: 40px;
+.logo-font {
+  font-family: "RoadRaceStamp", sans-serif;
 }
-<<<<<<< HEAD:Pagina2/css/stylesHome.css
-
-.contenedor-article {
-  position: relative;
-  display: flex;
-}
-=======
->>>>>>> parent of 1b747b6 (API - Clima):HOME/css/stylesHome.css

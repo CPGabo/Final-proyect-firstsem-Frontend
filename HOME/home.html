@@ -29,7 +29,7 @@
               class="me-2"
             />
 
-            RUIDO BLANCO
+            <span class="logo-font">RUIDO BLANCO</span>
           </a>
 
           <!-- BOTON RESPONSIVE -->
@@ -66,10 +66,26 @@
                   ARTICULOS
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">SOCIAL</a></li>
-                  <li><a class="dropdown-item" href="#">INAU</a></li>
-                  <li><a class="dropdown-item" href="#">FEMINISMO</a></li>
-                  <li><a class="dropdown-item" href="#">LGBTQ+</a></li>
+                  <li>
+                    <a class="dropdown-item" href="/Articulo/articulo.html?id=1"
+                      >SOCIAL</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Articulo/articulo.html?id=2"
+                      >INFANCIAS</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Articulo/articulo.html?id=3"
+                      >FEMINISMO</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Articulo/articulo.html?id=4"
+                      >LGBTQ+</a
+                    >
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -145,7 +161,7 @@
         data-bs-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
+        <span class="visually-hidden">Previous</span>
       </button>
       <button
         class="carousel-control-next"
@@ -154,7 +170,7 @@
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
+        <span class="visually-hidden">Next</span>
       </button>
     </div>
 
@@ -163,7 +179,7 @@
     <section class="sobre-nosotros">
       <div class="contenedor-sobre">
         <div class="imagen-sobre">
-          <img src="/Imagenes/SPIDER.jpg" alt="Imagen representativa" />
+          <img src="/Imagenes/LOGO_RB.png" alt="Imagen representativa" />
         </div>
 
         <div class="texto-sobre">
@@ -184,59 +200,24 @@
         </div>
       </div>
     </section>
-
-    <!-- PARTE DE LOS ARTICULOS -->
-    <section class="section-article">
-      <div class="contenedor-article">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a short card.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!--ARTICULOS CARDS-->
+    <section>
+      <h2>Nuestros artículos</h2>
+      <div>
+        <h3>SOCIAL</h3>
+        <div id="grilla-articulos"></div>
+      </div>
+      <div>
+        <h3>INFANCIAS</h3>
+        <div id="grilla-articulos"></div>
+      </div>
+      <div>
+        <h3>FEMINISMO</h3>
+        <div id="grilla-articulos"></div>
+      </div>
+      <div>
+        <h3>LGBTQ+</h3>
+        <div id="grilla-articulos"></div>
       </div>
     </section>
     <!--SCRIPT SRC-->
@@ -245,6 +226,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="/HOME/script.js"></script>
   </body>
 </html>
