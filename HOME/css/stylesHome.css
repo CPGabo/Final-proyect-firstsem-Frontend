@@ -115,3 +115,11 @@ body {
 .logo-font {
   font-family: "RoadRaceStamp", sans-serif;
 }
+
+.apiClima
+{
+  margin-right: 15px;
+  color: rgb(103, 98, 98);
+  align-items: center;
+  font-size: small;
+}
