@@ -13,7 +13,7 @@ body {
 /* NAVBAR */
 
 .navbar-scroll {
-  position: fixed;
+  position: 0;
   width: 100%;
 
   z-index: 1000;
@@ -55,6 +55,7 @@ body {
 
 #carouselExampleCaptions {
   max-height: 500px;
+  margin-top: 0px;
 }
 
 .carousel-indicators {
@@ -64,7 +65,7 @@ body {
 .carousel-item {
   height: 500px;
   overflow: hidden;
-  margin-top: 75px;
+  margin-top: 0px;
 }
 
 .carousel-item img {
