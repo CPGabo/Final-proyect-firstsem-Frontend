@@ -30,30 +30,22 @@ async function cargarArticulos() {
       grilla.insertAdjacentHTML(
         "beforeend",
         `
-<div class="col-12 col-md-6 col-lg-4">
-<div class="card h-100">
-<div class="card-body">
-<span class="badge bg-secondary
-
-mb-2">${articulo.categoria}</span>
-
-<h5 class="card-title">${articulo.titulo}</h5>
-<p class="card-text text-muted">${articulo.descripcion}</p>
-</div>
-<div class="card-footer d-flex justify-content-between
-
-align-items-center">
-
-<small class="text-muted">Por ${articulo.autor}</small>
-<a href="/Articulo/articulo.html?id=${articulo.id}"class="btn btn-sm
-
-btn-outline-dark">
-Leer más
-</a>
-</div>
-</div>
-</div>
-`,
+<div class="col-12 col-md-6 col-lg-6">
+    <div class="rb-card h-100">
+      <div class="rb-card-body">
+        <span class="rb-badge">${articulo.categoria}</span>
+        <h5 class="rb-title">${articulo.titulo}</h5>
+        <p class="rb-desc">${articulo.descripcion}</p>
+      </div>
+      <div class="rb-card-footer">
+        <small class="rb-autor">Por ${articulo.autor}</small>
+        <a href="/Articulo/articulo.html?id=${articulo.id}" class="rb-btn">
+          Leer más
+        </a>
+      </div>
+    </div>
+  </div>
+  `,
       );
     }
   } catch (error) {
@@ -68,41 +60,40 @@ Leer más
 // Ejecutar cuando la página cargue
 cargarArticulos();
 
-
 // API - CLIMA
 function emojiClima(code) {
-if (code === 0) return "☀️";
-if (code <= 3) return "⛅";
-if (code <= 48) return "☁️";
-if (code <= 67) return "️";
-if (code <= 77) return "❄️";
-if (code <= 82) return "️";
-return "⚡";
+  if (code === 0) return "☀️";
+  if (code <= 3) return "⛅";
+  if (code <= 48) return "☁️";
+  if (code <= 67) return "️";
+  if (code <= 77) return "❄️";
+  if (code <= 82) return "️";
+  return "⚡";
 }
 async function cargarClima() {
-const clima = document.querySelector("#clima");
-try {
-const response = await fetch(
-"https://api.open-meteo.com/v1/forecast" +
-"?latitude=-34.9&longitude=-56.17&current_weather=true"
-);
-if (!response.ok) throw new Error("Error al obtener el clima");
-const datos = await response.json();
-const temp = datos.current_weather.temperature;
-const viento = datos.current_weather.windspeed;
-const emoji = emojiClima(datos.current_weather.weathercode);
-clima.innerHTML = `
+  const clima = document.querySelector("#clima");
+  try {
+    const response = await fetch(
+      "https://api.open-meteo.com/v1/forecast" +
+        "?latitude=-34.9&longitude=-56.17&current_weather=true",
+    );
+    if (!response.ok) throw new Error("Error al obtener el clima");
+    const datos = await response.json();
+    const temp = datos.current_weather.temperature;
+    const viento = datos.current_weather.windspeed;
+    const emoji = emojiClima(datos.current_weather.weathercode);
+    clima.innerHTML = `
 <p class="mb-0">
 ${emoji} Montevideo — <strong>${temp}°C</strong>
 &nbsp;|&nbsp;
 💨 Viento: ${viento} km/h
 </p>
 `;
-} catch (error) {
-clima.innerHTML = `<p class="text-muted mb-0">Clima no
+  } catch (error) {
+    clima.innerHTML = `<p class="text-muted mb-0">Clima no
 disponible.</p>`;
-console.error(error);
-}
+    console.error(error);
+  }
 }
 
-cargarClima()
+cargarClima();
