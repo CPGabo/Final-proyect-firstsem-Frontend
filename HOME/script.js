@@ -97,3 +97,33 @@ disponible.</p>`;
 }
 
 cargarClima();
+
+const form = document.querySelector("#form-contacto");
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // evitar que recargue la pagina
+  // Leer los valores
+  const nombre = document.querySelector("#nombre").value.trim();
+  const email = document.querySelector("#email").value.trim();
+  const tema = document.querySelector("#tema").value;
+  const mensaje = document.querySelector("#mensaje").value.trim();
+  // Validar
+  if (!nombre || !email || !mensaje) {
+    mostrarError("Todos los campos son obligatorios.");
+    return;
+  }
+  // Usar los datos
+  console.log({ nombre, email, tema, mensaje });
+  mostrarExito("Gracias " + nombre + "! Tu mensaje fue enviado.");
+  // Limpiar el formulario
+  form.reset();
+});
+function mostrarError(texto) {
+  const alerta = document.querySelector("#alerta");
+  alerta.textContent = texto;
+  alerta.className = "alert alert-danger";
+}
+function mostrarExito(texto) {
+  const alerta = document.querySelector("#alerta");
+  alerta.textContent = texto;
+  alerta.className = "alert alert-success";
+}
