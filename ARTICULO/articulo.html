@@ -19,7 +19,10 @@
       <nav class="navbar navbar-expand-lg colorBase navbar-scroll">
         <div class="container-fluid">
           <!-- LOGO + TITULO -->
-          <a class="navbar-brand d-flex align-items-center" href="home.html">
+          <a
+            class="navbar-brand d-flex align-items-center"
+            href="/HOME/home.html"
+          >
             <img
               src="/Imagenes/LOGO_RB.png"
               alt="Logo"
@@ -52,12 +55,6 @@
               />
               <button class="btn btnSearch" type="submit">Buscar</button>
             </form>
-            <button
-              class="btn btnSearch"
-              onclick="window.location.href = '/HOME/home.html'"
-            >
-              Volver a Home
-            </button>
 
             <!--ARTICULOS DROPDOWN-->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -71,14 +68,36 @@
                   ARTICULOS
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">SOCIAL</a></li>
-                  <li><a class="dropdown-item" href="#">INAU</a></li>
-                  <li><a class="dropdown-item" href="#">FEMINISMO</a></li>
-                  <li><a class="dropdown-item" href="#">LGBTQ+</a></li>
+                  <li>
+                    <a class="dropdown-item" href="/Articulo/articulo.html?id=1"
+                      >SOCIAL</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Articulo/articulo.html?id=2"
+                      >INFANCIAS</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Articulo/articulo.html?id=3"
+                      >FEMINISMO</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Articulo/articulo.html?id=4"
+                      >LGBTQ+</a
+                    >
+                  </li>
                 </ul>
               </li>
             </ul>
           </div>
+          <!-- Sección de clima en index.html -->
+          <section class="apiClima">
+            <div id="clima" class="text-left">
+              <p class="text-muted mb-0">Cargando clima...</p>
+            </div>
+          </section>
         </div>
       </nav>
     </header>

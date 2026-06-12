@@ -22,7 +22,7 @@ body {
 
 .colorBase {
   background-color: #dcbd81;
-  border-bottom: solid #4f3926;
+  border: solid #4f3926;
 }
 
 .controlLargoBuscador {
@@ -50,12 +50,23 @@ body {
 .movement {
   margin-left: 40px;
 }
-
-a {
-  color: #302217;
+.form-control,
+.form-select {
+  background-color: #dcbd81;
+  border-color: #4f3926;
+  color: #140e09;
 }
-a:hover {
-  color: #dcbd81;
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #dcbd81;
+  border-color: #4f3926;
+  box-shadow: 0 0 0 3px #4f392640;
+}
+
+.form-label {
+  color: #140e09;
+  font-weight: 500;
 }
 /* ARTICULO */
 
@@ -192,4 +203,13 @@ a:hover {
 #subtitulo {
   font-family: "RoadRaceStamp", sans-serif;
   font-weight: bold;
+}
+
+.logo-font {
+  font-family: "RoadRaceStamp", sans-serif;
+}
+
+.apiClima {
+  font-size: small;
+  color: #302217;
 }
