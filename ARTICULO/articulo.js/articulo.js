@@ -13,7 +13,7 @@ async function cargarArticulo() {
       <p><strong>Autor:</strong> ${articulo.autor}</p>
       <p><strong>Categoría:</strong> ${articulo.categoria}</p>
       <p>${articulo.descripcion}</p>
-      
+
     `;
   } catch (error) {
     contenedor.innerHTML = `<p class="text-danger">No se pudo cargar el artículo.</p>`;

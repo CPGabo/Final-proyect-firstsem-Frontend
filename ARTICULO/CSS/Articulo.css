@@ -57,3 +57,139 @@ a {
 a:hover {
   color: #dcbd81;
 }
+/* ARTICULO */
+
+.articulo-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  padding-top: 120px;
+}
+
+.articulo {
+  background: #30221764;
+  max-width: 900px;
+  width: 100%;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 95%;
+}
+.categoria {
+  display: inline-block;
+  background: #111;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+.titulo {
+  font-family: "RoadRaceStamp", sans-serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.meta {
+  display: flex;
+  gap: 20px;
+  color: #5a4925;
+  margin-bottom: 30px;
+  border-bottom: 4px solid #4f3926;
+  padding-bottom: 15px;
+  justify-content: flex-end;
+}
+#meta {
+  color: #111;
+}
+#bloque-noticia {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* IMAGENES */
+
+.imagen-principal img {
+  border-radius: 10px;
+
+  float: left;
+  height: 300px;
+  width: 100%;
+  margin: 0 20px 20px -13px;
+}
+
+.imagen-principal figcaption {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#description {
+  color: #111;
+}
+
+.imagen-secundaria {
+  float: left;
+  width: 100%;
+  height: 300px;
+  margin: 0 20px 20px 0;
+}
+
+.imagen-secundaria img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.imagen-secundaria figcaption {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+#description-2 {
+  color: #111;
+}
+
+.contenido {
+  margin-top: 40px;
+
+  column-gap: 40px;
+  flex: 2;
+  column-count: 2;
+}
+
+.contenido p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+.contenido h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  column-span: all;
+}
+
+.contenido blockquote {
+  border-left: 5px solid #333;
+  padding-left: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+#subtitulo {
+  font-family: "RoadRaceStamp", sans-serif;
+  font-weight: bold;
+}
