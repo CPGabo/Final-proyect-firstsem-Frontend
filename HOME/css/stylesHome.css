@@ -185,6 +185,7 @@ body {
   background: #302217;
   color: #dcbd81;
 }
+
 /*FORM CSS*/
 .form-control,
 .form-select {
@@ -218,9 +219,12 @@ body {
   transform: translate(+2px, +2px);
 }
 
-.contacto {
-  color: #140e09;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: Georgia, serif;
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #dcbd81 inset !important;
+  -webkit-text-fill-color: #140e09 !important;
+  border: 1px solid #4f3926 !important;
+  transition: background-color 5000s ease-in-out 0s;
 }

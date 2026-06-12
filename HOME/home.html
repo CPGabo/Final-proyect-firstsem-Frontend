@@ -213,44 +213,36 @@
     </section>
 
     <!--FORMULARIO-->
-    <div class="container sobre-nosotros">
-      <p class="contacto">CONTACTO</p>
-      <form action="">
-        <div class="mb-3">
-          <label class="form-label" for="text">Nombre</label>
-          <input class="form-control" type="text" />
-        </div>
+    <form id="form-contacto" class="sobre-nosotros">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" class="form-control" />
+      </div>
 
-        <div class="mb-3">
-          <label class="form-label" for="email">E-mail</label>
-          <input class="form-control" type="email" name="" id="" />
-        </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" id="email" class="form-control" />
+      </div>
 
-        <div class="mb-3">
-          <label class="form-label" for="action">Asunto</label>
+      <div class="mb-3">
+        <label for="tema" class="form-label">Asunto</label>
+        <select id="tema" class="form-select">
+          <option value="">Selecciona una opción</option>
+          <option value="consulta">Consulta</option>
+          <option value="sugerencia">Sugerencia</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
 
-          <select class="form-select" name="action" id="action">
-            <option value="">Selecciona una opción</option>
-            <option value="consulta">Consulta</option>
-            <option value="sugerencia">Sugerencia</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Escriba su mensaje</label>
+        <textarea id="mensaje" rows="5" class="form-control"></textarea>
+      </div>
 
-        <div class="mb-3">
-          <label class="form-label" for="texto">Escriba su mensaje</label>
+      <div id="alerta" class="d-none mb-3"></div>
 
-          <textarea
-            class="form-control"
-            name="texto"
-            id="area"
-            rows="5"
-          ></textarea>
-        </div>
-
-        <button class="btn btn-form">Enviar comentario</button>
-      </form>
-    </div>
+      <button type="submit" class="btn btn-form">Enviar comentario</button>
+    </form>
 
     <!--FOOTER-->
 
