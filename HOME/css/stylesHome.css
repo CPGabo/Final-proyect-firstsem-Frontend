@@ -121,6 +121,11 @@ body {
   color: #302217;
 }
 
+/*FUENTES Y TITULOS*/
+.font-titulo {
+  font-family: "RoadRaceStamp", sans-serif;
+}
+
 /*CSS CARDS*/
 .rb-card {
   border: 0.5px solid #302217;

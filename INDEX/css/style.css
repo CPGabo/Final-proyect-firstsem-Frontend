@@ -100,9 +100,3 @@ button:active {
 
   z-index: 1000;
 }
-
-/*TITULOS FUENTES*/
-
-.font-titulo {
-  font-family: "RoadRaceStamp", sans-serif;
-}
