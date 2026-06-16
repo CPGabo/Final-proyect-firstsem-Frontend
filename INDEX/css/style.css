@@ -38,7 +38,7 @@ body {
   gap: 0.3rem;
 }
 p {
-  font-size: 80px;
+  font-size: 40px;
   font-family: "Rubik Dirt", system-ui;
   margin-top: 20px;
   margin-bottom: 50px;
@@ -85,4 +85,18 @@ button:active {
   );
 
   color: rgb(94, 94, 94);
+}
+
+/*REPRODUCTOR*/
+#reproductor {
+  position: fixed; /* queda fijo en pantalla */
+  top: 20px; /* margen superior */
+  left: 20px; /* margen izquierdo */
+
+  display: flex;
+  flex-direction: column; /* elementos uno debajo del otro */
+  align-items: flex-start;
+  gap: 1px; /* separación entre elementos */
+
+  z-index: 1000;
 }
