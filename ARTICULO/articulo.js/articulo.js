@@ -1,27 +1,59 @@
-//async function cargarArticulo() {
-//const contenedor = document.querySelector("#articulo");
-//const params = new URLSearchParams(window.location.search);
-//const id = params.get("id");
+async function cargarArticulo() {
+  const grilla = document.querySelector("#articulo");
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
 
-//try {
-//const response = await fetch(`http://localhost:3000/articulos/${id}`);
-//if (!response.ok) throw new Error("Error: " + response.status);
-//const articulo = await response.json();
+  try {
+    const response = await fetch(`http://localhost:3000/articulos/${id}`);
+    if (!response.ok) throw new Error("Error: " + response.status);
 
-//contenedor.innerHTML = `
-//<h1>${articulo.titulo}</h1>
-//<p><strong>Autor:</strong> ${articulo.autor}</p>
-//<p><strong>Categoría:</strong> ${articulo.categoria}</p>
-//<p>${articulo.descripcion}</p>
+    const articulo = await response.json();
 
-//`;
-//} catch (error) {
-//  contenedor.innerHTML = `<p class="text-danger">No se pudo cargar el artículo.</p>`;
-//  console.error(error);
-//}
-//}
+    grilla.innerHTML = "";
 
-//cargarArticulo();
+    grilla.insertAdjacentHTML(
+      "beforeend",
+      `
+      <main class="articulo-container">
+        <article class="articulo">
+          <header class="articulo-header">
+            <span class="categoria">${articulo.categoria}</span>
+            <h1 class="titulo">${articulo.titulo}</h1>
+            <div class="meta">
+              <span id="meta">Por ${articulo.autor}</span>
+            </div>
+          </header>
+          <section id="bloque-noticia">
+            <div class="contenido">
+              <figure class="imagen-principal">
+                <img src="${articulo.imagenes[0]}" alt="Imagen del artículo" />
+              </figure>
+              <p>${articulo.contenido}</p>
+              <h2 id="subtitulo">${articulo.subtitulo}</h2>
+              <figure class="imagen-secundaria">
+                <img src="${articulo.imagenes[1]}" alt="Segunda imagen" />
+              </figure>
+              <p>${articulo.contenido2}</p>
+              <figure class="imagen-terciaria">
+                <img src="${articulo.imagenes[2]}" alt="Tercera imagen" />
+              </figure>
+            </div>
+          </section>
+        </article>
+      </main>
+    `,
+    );
+  } catch (error) {
+    grilla.innerHTML = `
+      <div class="col-12">
+        <p class="text-danger">No se pudieron cargar los artículos.</p>
+      </div>
+    `;
+    console.error(error);
+  }
+}
+
+cargarArticulo();
 
 const navbar = document.querySelector(".navbar-scroll");
 

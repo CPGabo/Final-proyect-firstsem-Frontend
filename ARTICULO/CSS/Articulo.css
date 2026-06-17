@@ -15,7 +15,6 @@ body {
 .navbar-scroll {
   position: fixed;
   width: 100%;
-
   z-index: 1000;
   transition: transform 0.4s ease-in-out;
 }
@@ -50,6 +49,7 @@ body {
 .movement {
   margin-left: 40px;
 }
+
 .form-control,
 .form-select {
   background-color: #dcbd81;
@@ -68,6 +68,7 @@ body {
   color: #140e09;
   font-weight: 500;
 }
+
 /* ARTICULO */
 
 .articulo-container {
@@ -79,14 +80,13 @@ body {
 
 .articulo {
   background: #30221764;
-  max-width: 900px;
-  width: 100%;
   padding: 50px;
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
   width: 95%;
 }
+
 .categoria {
   display: inline-block;
   background: #111;
@@ -96,6 +96,7 @@ body {
   font-size: 0.8rem;
   margin-bottom: 15px;
 }
+
 .titulo {
   font-family: "RoadRaceStamp", sans-serif;
   font-size: 3rem;
@@ -103,6 +104,7 @@ body {
   margin-bottom: 20px;
   font-weight: bold;
 }
+
 .meta {
   display: flex;
   gap: 20px;
@@ -112,9 +114,11 @@ body {
   padding-bottom: 15px;
   justify-content: flex-end;
 }
+
 #meta {
   color: #111;
 }
+
 #bloque-noticia {
   display: flex;
   gap: 30px;
@@ -123,13 +127,16 @@ body {
 
 /* IMAGENES */
 
+.imagen-principal {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .imagen-principal img {
   border-radius: 10px;
-
-  float: left;
   height: 300px;
   width: 100%;
-  margin: 0 20px 20px -13px;
+  object-fit: cover;
 }
 
 .imagen-principal figcaption {
@@ -137,8 +144,6 @@ body {
   color: #777;
   font-size: 0.9rem;
   margin-top: 10px;
-  width: 100%;
-  border-radius: 10px;
 }
 
 #description {
@@ -146,15 +151,15 @@ body {
 }
 
 .imagen-secundaria {
-  float: left;
-  width: 100%;
-  height: 300px;
-  margin: 0 20px 20px 0;
+  float: right;
+  width: 45%;
+  height: auto;
+  margin: 0 0 20px 20px;
 }
 
 .imagen-secundaria img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -170,12 +175,25 @@ body {
   color: #111;
 }
 
+.imagen-terciaria {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.imagen-terciaria img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* CONTENIDO */
+
 .contenido {
   margin-top: 40px;
-
+  column-count: 2;
   column-gap: 40px;
   flex: 2;
-  column-count: 2;
 }
 
 .contenido p {
