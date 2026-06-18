@@ -69,14 +69,14 @@ document.querySelector("#btn-play").addEventListener("click", () => {
   if (!reproduciendo) {
     iniciarAudio();
     reproduciendo = true;
-    document.querySelector("#btn-play").textContent = "⏸ Pause";
+    document.querySelector("#btn-play").textContent = "⏸ Detener";
   } else {
     if (audioCtx.state === "running") {
       audioCtx.suspend();
-      document.querySelector("#btn-play").textContent = "▶ Play";
+      document.querySelector("#btn-play").textContent = "▶ Escuchar";
     } else {
       audioCtx.resume();
-      document.querySelector("#btn-play").textContent = "⏸ Pause";
+      document.querySelector("#btn-play").textContent = "⏸ Detener";
     }
   }
 });
