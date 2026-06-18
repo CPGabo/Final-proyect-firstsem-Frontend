@@ -101,4 +101,14 @@ p {
   z-index: 1000;
 }
 #btn-play {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 30%;
+  margin-bottom: 100px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: fix;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
