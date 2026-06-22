@@ -41,6 +41,28 @@ async function cargarArticulo() {
           </section>
         </article>
       </main>
+       <main class="articulo-container">
+        <article class="articulo">
+          <header class="articulo-header">
+            <span class="categoria">${articulo.categoria}</span>
+            <h1 class="titulo">${articulo.tituloIngles}</h1>
+            <div class="meta">
+              <span id="meta">Por ${articulo.autor}</span>
+            </div>
+          </header>
+          <section id="bloque-noticia">
+            <div class="contenido">
+              <figure class="imagen-principal">
+                <img src="${articulo.imagenes[3]}" alt="Imagen del artículo" />
+              </figure>
+              <p>${articulo.contenidoIngles}</p>
+              <figure class="imagen-terciaria">
+                <img src="${articulo.imagenes[4]}" alt="imagen ingles" />
+              </figure>
+            </div>
+          </section>
+        </article>
+      </main>
     `,
     );
   } catch (error) {
