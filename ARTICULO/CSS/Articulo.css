@@ -231,3 +231,12 @@ body {
   font-size: small;
   color: #302217;
 }
+
+/*FUENTES Y TITULOS*/
+.font-titulo {
+  font-family: "RoadRaceStamp", sans-serif;
+}
+
+.font-texto{
+  font-family: "Rubik Dirt", system-ui;
+}

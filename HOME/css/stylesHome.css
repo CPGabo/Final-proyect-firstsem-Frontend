@@ -126,6 +126,10 @@ body {
   font-family: "RoadRaceStamp", sans-serif;
 }
 
+.font-texto{
+  font-family: "Rubik Dirt", system-ui;
+}
+
 /*CSS CARDS*/
 .rb-card {
   border: 0.5px solid #302217;
