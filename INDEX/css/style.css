@@ -88,26 +88,32 @@ p {
 
 /*REPRODUCTOR*/
 #reproductor {
-  position: fixed; /* queda fijo en pantalla */
-  top: 20px; /* margen superior */
-  left: 20px; /* margen izquierdo */
+  position: fixed;
+  top: 20px;
+  left: 20px;
 
   display: flex;
-  flex-direction: column; /* elementos uno debajo del otro */
+  flex-direction: column;
   align-items: flex-start;
-  gap: 1px; /* separación entre elementos */
-
-  z-index: 1000;
+  gap: 2px; /* controla la separación */
 }
 #btn-play {
   padding: 10px 20px;
   background-color: black;
   color: white;
   border-radius: 30%;
-  margin-bottom: 100px;
   font-family: "RoadRaceStamp", sans-serif;
-  font-size: fix;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   cursor: pointer;
+}
+
+#label-Volumen {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+#volumen {
+  margin: 0;
 }
