@@ -33,8 +33,8 @@ async function cargarArticulos() {
 <div class="col-12 col-md-6 col-lg-6">
     <div class="rb-card h-100">
       <div class="rb-card-body">
-        <span class="rb-badge">${articulo.categoria}</span>
-        <h5 class="rb-title">${articulo.titulo}</h5>
+        <span class="font-texto">${articulo.categoria}</span>
+        <h5 class="logo-font">${articulo.titulo}</h5>
         <p class="rb-desc">${articulo.descripcion}</p>
       </div>
       <div class="rb-card-footer">
