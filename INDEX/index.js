@@ -1,4 +1,8 @@
-document.getElementById("btnEntrar").addEventListener("click", () => {
+// document.getElementById("btnEntrar").addEventListener("click", () => {
+//   window.location.href = "/HOME/home.html";
+// });
+
+document.getElementById("patronus-btn").addEventListener("click", () => {
   window.location.href = "/HOME/home.html";
 });
 
