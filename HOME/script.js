@@ -15,6 +15,21 @@ window.addEventListener("scroll", () => {
 
   ultimoScroll = scrollActual;
 });
+// Animación al hacer scroll
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  },
+);
 
 //CARDS DE ARTICULOS
 async function cargarArticulos() {
@@ -30,7 +45,7 @@ async function cargarArticulos() {
       grilla.insertAdjacentHTML(
         "beforeend",
         `
-<div class="col-12 col-md-6 col-lg-6">
+<div class="col-12 col-md-6 col-lg-6 reveal">
     <div class="rb-card h-100">
       <div class="rb-card-body">
         <span class="font-texto">${articulo.categoria}</span>
@@ -47,6 +62,8 @@ async function cargarArticulos() {
   </div>
   `,
       );
+      const ultimaCard = grilla.lastElementChild;
+      observer.observe(ultimaCard);
     }
   } catch (error) {
     grilla.innerHTML = `
@@ -127,3 +144,7 @@ function mostrarExito(texto) {
   alerta.textContent = texto;
   alerta.className = "alert alert-success";
 }
+
+document.querySelectorAll(".reveal").forEach((el) => {
+  observer.observe(el);
+});
