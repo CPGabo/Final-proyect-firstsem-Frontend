@@ -125,6 +125,34 @@ p {
 #volumen {
   margin: 0;
 }
+.input-volumen {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 200px;
+  height: 6px;
+  border-radius: 5px;
+  outline: none;
+  background: linear-gradient(to right, black 30%, gray 30%);
+}
+
+/* Círculo */
+.input-volumen::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.input-volumen::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
 /*Boton Patronus Ingresar*/
 #patronus-btn {

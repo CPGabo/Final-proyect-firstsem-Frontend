@@ -24,6 +24,7 @@ function iniciarAudio() {
   const bufferSize = audioCtx.sampleRate * 2;
   const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
   const data = buffer.getChannelData(0);
+
   for (let i = 0; i < bufferSize; i++) {
     data[i] = Math.random() * 2 - 1;
   }
@@ -32,7 +33,7 @@ function iniciarAudio() {
   source.buffer = buffer;
   source.loop = true;
 
-  // Filtros EQ — frecuencias fijas, el slider controla la ganancia
+  // Filtros EQ
   filtroGraves = audioCtx.createBiquadFilter();
   filtroGraves.type = "lowshelf";
   filtroGraves.frequency.value = 320;
@@ -85,11 +86,21 @@ document.querySelector("#btn-play").addEventListener("click", () => {
   }
 });
 
-// Sliders
-document.querySelector("#volumen").addEventListener("input", (e) => {
+// Slider de volumen
+const sliderVolumen = document.querySelector("#volumen");
+
+sliderVolumen.addEventListener("input", (e) => {
   if (gainNode) gainNode.gain.value = e.target.value;
+
+  const porcentaje = e.target.value * 100;
+  e.target.style.background =
+    `linear-gradient(to right, black ${porcentaje}%, gray ${porcentaje}%)`;
 });
 
+// Pintar el slider al cargar la página
+sliderVolumen.dispatchEvent(new Event("input"));
+
+// Sliders EQ
 document.querySelector("#graves").addEventListener("input", (e) => {
   if (filtroGraves) filtroGraves.gain.value = e.target.value;
 });
@@ -128,7 +139,7 @@ function dibujar() {
       i * barWidth,
       canvas.height - barHeight,
       barWidth - 1,
-      barHeight,
+      barHeight
     );
   });
 }
