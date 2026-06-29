@@ -44,7 +44,7 @@ async function cargarArticulo() {
        <main class="articulo-container">
         <article class="articulo">
           <header class="articulo-header">
-            <span class="categoria">${articulo.categoria}</span>
+            <span class="categoria font-texto">${articulo.categoria}</span>
             <h1 class="titulo">${articulo.tituloIngles}</h1>
             <div class="meta">
               <span id="meta">Por ${articulo.autor}</span>
