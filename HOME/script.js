@@ -128,6 +128,12 @@ form.addEventListener("submit", (event) => {
     mostrarError("Todos los campos son obligatorios.");
     return;
   }
+  // Validar formato de email terminado en .com
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/;
+  if (!emailRegex.test(email)) {
+    mostrarError("El correo debe ser válido y terminar en .com");
+    return;
+  }
   // Usar los datos
   console.log({ nombre, email, tema, mensaje });
   mostrarExito("Gracias " + nombre + "! Tu mensaje fue enviado.");

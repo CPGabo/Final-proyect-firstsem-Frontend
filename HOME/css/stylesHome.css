@@ -31,71 +31,43 @@ body {
 .logo-font {
   font-size: 2rem;
 }
-.navbar .container-fluid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .navbar-scroll {
   position: fixed;
   width: 100%;
   min-height: 90px;
-
-  display: flex;
-  flex-direction: column !important;
-  align-items: stretch;
-
   z-index: 1000;
   transition: transform 0.4s ease-in-out;
 }
 
 .colorBase {
   background: #d5c5a486;
-
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-
   border-bottom: 2px solid #4f3926;
 }
 
-.menu-desktop {
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 20px;
-
-  margin-top: 4px;
-}
-
+/* MENU */
 .menu-desktop a {
+  display: block;
   text-decoration: none;
-
   color: #302217;
-
   padding: 10px 28px;
-
   font-size: 1.1rem;
   letter-spacing: 1.5px;
-
+  text-align: center;
   position: relative;
-
   transition: all 0.3s ease;
 }
+
 .menu-desktop a::after {
   content: "";
-
   position: absolute;
   left: 10%;
   bottom: 4px;
-
   width: 0;
   height: 2px;
-
   background-color: #4f3926;
-
   transition:
     width 0.3s ease,
     background-color 0.3s ease;
@@ -104,7 +76,6 @@ body {
 .menu-desktop a:hover {
   background-color: #302217;
   color: #d5c5a4;
-
   transform: translateY(-2px);
 }
 
@@ -112,9 +83,43 @@ body {
   width: 80%;
   background-color: #d5c5a4;
 }
-.menu-desktop a:not(:last-child) {
-  border-right: 1px solid rgba(79, 57, 38, 0.15);
+
+.menu-desktop .col {
+  border-bottom: 1px solid rgba(79, 57, 38, 0.15);
 }
+
+/* Tablet: 2 columnas - texto un poco mas chico para que no se desborde */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .menu-desktop a {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    letter-spacing: 0.8px;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu-desktop {
+    display: flex !important;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .menu-desktop .col {
+    flex: 0 0 auto;
+    width: auto;
+    border-bottom: none;
+    border-right: 1px solid rgba(79, 57, 38, 0.15);
+  }
+  .menu-desktop .col:last-child {
+    border-right: none;
+  }
+  .menu-desktop a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+  }
+}
+
 .menu-mobile {
   display: none;
 }
@@ -200,17 +205,20 @@ body {
 
 /*CSS CARDS*/
 .rb-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
   border: 0.5px solid #302217;
   border-top: 3px solid #302217;
-  border-radius: 0;
+  border-radius: 20px;
   background: #30221764 !important;
   color: #302217;
-  border-radius: 20px;
-  max-height: 200px;
-  min-height: 200px;
 }
 
 .rb-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
   padding: 1rem 1rem 0.5rem;
   border-bottom: 0.5px solid #ccc;
 }
@@ -239,10 +247,13 @@ body {
 }
 
 .rb-card-footer {
+  flex: 0 0 auto;
   padding: 0.6rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .rb-autor {
@@ -260,13 +271,13 @@ body {
   text-decoration: none;
   color: #4f3926;
   border-radius: 20px;
+  white-space: nowrap;
 }
 
 .rb-btn:hover {
   background: #302217;
   color: #d5c5a4;
 }
-
 /*FORM CSS*/
 .form-control,
 .form-select {

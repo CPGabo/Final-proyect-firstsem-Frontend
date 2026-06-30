@@ -20,6 +20,7 @@
 
   <body>
     <!--HEADER-->
+    <!--HEADER-->
     <header>
       <!--NAVBAR REUTILIZABLE-->
       <nav class="navbar navbar-expand-lg colorBase navbar-scroll">
@@ -33,7 +34,6 @@
               height="40"
               class="me-2"
             />
-
             <span class="logo-font">RUIDO BLANCO</span>
           </a>
 
@@ -49,22 +49,24 @@
 
           <!-- CONTENIDO -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- BUSCADOR CENTRADO -->
-            <!-- <form class="d-flex ms-auto me-4" role="search">
-              <input
-                class="form-control me-2 controlLargoBuscador"
-                type="search"
-                placeholder="Buscar..."
-              />
-              <button class="btn btnSearch" type="submit">Buscar</button>
-            </form> -->
-            <div class="menu-desktop font-titulo">
-              <a href="/Articulo/articulo.html?id=1">COMUNITARIOS</a>
-              <a href="/Articulo/articulo.html?id=2">INFANCIAS</a>
-              <a href="/Articulo/articulo.html?id=3">FEMINISMO</a>
-              <a href="/Articulo/articulo.html?id=4">LGBTQ+</a>
+            <div
+              class="menu-desktop row row-cols-1 row-cols-md-2 row-cols-lg-4 g-0 font-titulo"
+            >
+              <div class="col">
+                <a href="/Articulo/articulo.html?id=1">COMUNITARIOS</a>
+              </div>
+              <div class="col">
+                <a href="/Articulo/articulo.html?id=2">INFANCIAS</a>
+              </div>
+              <div class="col">
+                <a href="/Articulo/articulo.html?id=3">FEMINISMO</a>
+              </div>
+              <div class="col">
+                <a href="/Articulo/articulo.html?id=4">LGBTQ+</a>
+              </div>
             </div>
           </div>
+
           <section class="apiClima">
             <div id="clima" class="text-left">
               <p class="text-muted mb-0">Cargando clima...</p>
@@ -73,7 +75,6 @@
         </div>
       </nav>
     </header>
-
     <!-- CARRUSEL INICIAL  -->
     <div id="carouselExampleCaptions" class="carousel slide">
       <div class="carousel-indicators">
