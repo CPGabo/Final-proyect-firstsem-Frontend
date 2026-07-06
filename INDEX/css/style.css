@@ -123,6 +123,7 @@ p {
 }
 
 #volumen {
+  width: 130px;
   margin: 0;
 }
 .input-volumen {
