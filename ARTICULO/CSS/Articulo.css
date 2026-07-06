@@ -75,7 +75,10 @@ body {
   display: flex;
   justify-content: center;
   padding: 40px 20px;
-  padding-top: 120px;
+}
+
+.articulo-container:nth-child(1) {
+  padding-top: 10rem;
 }
 
 .articulo {
@@ -240,7 +243,6 @@ body {
 .font-texto {
   font-family: "Rubik Dirt", system-ui;
 }
-
 
 p::first-letter {
   text-transform: uppercase;
