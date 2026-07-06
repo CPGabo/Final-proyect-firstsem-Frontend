@@ -150,7 +150,9 @@ body {
 
 .sobre-nosotros {
   width: 80%;
-  margin: 100px auto;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom:75px;
   padding: 40px;
   background: #30221764;
   border-radius: 30px;
@@ -381,4 +383,13 @@ body {
 .reveal.active {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+.formulario{ width: 80%;
+  margin: auto;
+  margin-top: 75px;
+  margin-bottom:75px;
+  padding: 40px;
+  background: #30221764;
+  border-radius: 30px;
 }
